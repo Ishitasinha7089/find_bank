@@ -1,0 +1,25 @@
+@import './styles/variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+body{
+  overflow: hidden;
+  background-color: $background;
+}
+.App{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+@media screen and (max-width: 785px) {
+  .App{
+    flex-direction: column;
+  }
+  body{
+    overflow: auto;
+  }
+}

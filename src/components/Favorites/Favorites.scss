@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.favs{
+    height: 100vh;
+    flex: 1;
+    box-sizing: border-box;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px;
+    h2{
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $dark-blue;
+    }
+    .loading{
+        flex: 1;
+        background-color: $background;
+        display: flex;
+        h4{
+            margin: auto;
+        }
+    }
+    .nodata{
+        height: 300px;
+        width: 100%;
+        background-color: $light-text;
+        display: flex;
+        h4{
+            margin: auto;
+        }
+    }
+}    

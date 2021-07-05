@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.bank-details{
+    background-color: $background;
+    height: 100vh;
+    width: 100%;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    h2{
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $dark-blue;
+    }
+    table{
+        margin-top: 40px;
+        tr , td  {
+            border: 1px solid $light-text-hover;
+            text-align: left;
+            padding: 13px 15px;
+            box-sizing: border-box;
+            background-color: #fff;
+            // border-bottom: 1.5px solid #eee;
+            font-size: 14px;
+        }
+        td{
+            &:first-child{
+                width: 20%;
+                background-color: $light-text;
+            }
+        }
+    }
+}

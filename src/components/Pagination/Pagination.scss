@@ -1,0 +1,147 @@
+@import "../../styles/variables.scss";
+.page{
+    flex: 1;
+    width: 100%;
+    background-color: $background;
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+    .table-wrapper{
+        .pageTable{
+            width: 100%;
+            box-shadow: 0 0 30px rgba($color: #aaaaaa, $alpha: 0.3);
+            border-collapse: collapse;
+            border-radius: 4px;
+            box-sizing: border-box;
+            overflow: hidden;
+            th{
+                background-color: $dark-blue;
+                padding: 15px 25px;
+                border: none;
+                color: #fff;
+                white-space: nowrap;
+            }
+            
+        }
+    }
+    .nodata{
+        height: 300px;
+        width: 100%;
+        background-color: $light-text;
+        display: flex;
+        h4{
+            margin: auto;
+        }
+    }
+    .pagination{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 30px auto;
+        .inputs{
+            display: flex;
+            flex-direction: row;
+            .jumpto, .rowlimit{
+                display: flex;
+                flex-direction: row;
+                margin-right: 30px;
+                h4{
+                    color: $dark-blue;
+                    font-size: 13px;
+                    margin-right: 10px;
+                }
+                input{
+                    width: 40px;
+                    background: transparent;
+                    outline: none;
+                    border:none;
+                    border-bottom: 2px solid $dark-blue;
+                    font-size: 14px;
+                    padding: 0 5px;
+                }
+            }
+        }
+        .pageNav{
+            stroke: $dark-blue;
+            cursor: pointer;
+            stroke-width: 2.5;
+            stroke-linecap: square;
+            &:hover{
+                stroke: $dark-blue-hover;
+            }
+        }
+        .disable{
+            cursor: not-allowed;
+            stroke: gray;
+            &:hover{
+                stroke: gray;
+            }
+        }
+        .btn-group{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .pageNavBtn{
+                height: 35px;
+                width: 35px;
+                border: none;
+                // background: $light-text;
+                margin: 0 5px;
+                cursor: pointer;
+                border-radius: 3px;
+                &:hover{
+                    background-color: $light-text-hover;
+                }
+            }
+        }
+        .activePage{
+            background: $dark-blue;
+            color: #fff;
+            &:hover{
+                background-color: $dark-blue-hover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1170px){
+      .page{
+          padding: 60px 20px;
+          
+      }
+}
+@media screen and (max-width: 1008px){
+     .page{
+         padding: 40px;
+         .table-wrapper{
+             width: 500px;
+             align-self: flex-start;
+         }
+         .pagination{
+             flex-direction: column;
+             .inputs{
+                 margin-bottom: 20px;
+             }
+         }
+     }
+}
+@media screen and (max-width: 540px){
+    .page{
+        .table-wrapper{
+            width: 300px;
+        }
+        .pagination{
+            .inputs{
+                flex-direction: column;
+                .jumpto{
+                    margin-top: 20px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}    

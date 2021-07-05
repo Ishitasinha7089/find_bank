@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.row{
+    td{
+        text-align: center;
+        padding: 13px 15px;
+        background-color: #fff;
+        border:none;
+        box-sizing: border-box;
+        border-bottom: 1.5px solid #eee;
+        font-size: 14px;
+        .heart{
+            fill: white;
+        }
+        .fav{
+            fill: crimson;
+             stroke: crimson;
+        }
+        
+    }
+    &:hover td{
+        background-color: $light-text;
+        cursor: pointer;
+        color: $dark-blue-hover;
+    }
+    
+}
